@@ -9,18 +9,19 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $table = 'posts';
+    protected $table = 'post';
 
     protected $fillable = [
+        'id',
         'title',
         'description',
         'category',
-        'user_id',
-        'slug'
+        'slug',
+        'user_id'
     ];
 
     //membuat setting atribut title
     public function setTitleAttribute($value){
-        $this->attribuets['title'] = $value;
+        $this->attributes['title'] = $value;
     }
 }

@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('slug');
+        Schema::table('post', function (Blueprint $table) {
+            $table->string('slug')->default('testing');
             //
         });
     }
